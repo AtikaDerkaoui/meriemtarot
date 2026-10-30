@@ -1,0 +1,120 @@
+/* COLORS */
+:root {
+    --primary-color: #e4e4e4;
+    --secondary-color: #0c224b;
+    --accent-color: #eeb600;
+    --beige-color: #e6d3b3;
+}
+
+/* FONTS */
+h1, h2{
+    font-family: "Playfair Display", serif;
+}
+p, h3, h4, h5, h6, li, a, button{
+    font-family: "Montserrat", sans-serif;
+}
+
+/* GLOBAL STYLES */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style-type: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    transition: ease-in-out 0.5s;
+    color: var(--primary-color);
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+}
+i{
+    cursor: pointer;
+}
+a{
+    color: inherit;
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    border: var(--primary-color) 1px solid;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+/* MAIN SECTIONS */
+
+/* =============== NAVBAR =============== */
+.nav{
+    padding: 1.5rem 2rem;
+    align-items:flex-end;
+}
+.nav h1{
+    font-size: 20pt;
+    font-weight: 600;
+}
+.nav-menu-container .open-menu-icon{
+    font-size: 24pt;
+    color: var(--primary-color);
+}
+
+/* MENU */
+.nav-links-container{
+    flex-direction: column;
+    gap: 2rem;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+
+    transform: translateX(100%);
+    
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+.nav-links-container.active{
+    transform: translateX(0);
+}
+
+
+
+/* =============== HOME =============== */
+.bg-image-computer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+.bg-image-mobile{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
