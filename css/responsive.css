@@ -1,12 +1,55 @@
 /* ==== LAPTOPS & SMALL DESKTOPS 769px – 1024px ==== */
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
 
 }
 
 
-/* ==== TABLETS & MOBILE 481px – 768px ==== */
-@media (max-width: 768px) {
+/* ==== LAPTOP and COMPUTER DEVICES ==== */
+@media (min-width: 768px) {
+    .nav-menu-container, .close-menu-icon, .menu-icons{
+        display: none !important;
+    }
+    .nav{
+        align-items: flex-end;
+        padding: 2rem 3rem;
+    }
+    .nav-links-container{
+        position:unset;
+        width:fit-content;
+        height:auto;
+        background-color: unset;
+        transform: translateX(0);
+        color: var(--primary-color);
+    }
+    .nav-links-container ul{
+        flex-direction: row;
+        align-items: flex-end;
+        padding: unset;
+    }
+    .nav-links-container ul li a{
+        color: var(--primary-color) !important;
+        font-size: 12pt;
+    }
+    .nav-links-container ul li a:hover{
+        color: var(--accent-color) !important;
+    }
+    .nav-links-container .btn{
+        border: 1px solid var(--accent-color);
+        color: var(--accent-color) !important;
+    }
+    .nav-links-container .btn:hover{
+        background-color: var(--accent-color);
+        color: var(--secondary-color) !important
+    }
 
+
+    /* =============== HOME =============== */
+    .bg-image-computer{
+        display:unset;
+    }
+    .bg-image-mobile{
+        display: none;
+    }
 }
 
 

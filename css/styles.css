@@ -62,8 +62,9 @@ a{
 }
 
 
-/* MAIN SECTIONS */
 
+
+/* MAIN SECTIONS */
 /* =============== NAVBAR =============== */
 .nav{
     padding: 1.5rem 2rem;
@@ -80,29 +81,61 @@ a{
 
 /* MENU */
 .nav-links-container{
-    flex-direction: column;
-    gap: 2rem;
-
     position: fixed;
     top: 0;
     right: 0;
     width: min(100vw, 400px);
+    width: 80vw;
     height: 100dvh;
-    z-index: 10000;
+    z-index: 10000 !important;
 
     transform: translateX(100%);
     transition: transform 0.3s ease;
 
     background-color: var(--primary-color);
-    color: block;
-}
-.nav-links-container ul li a{
     color: var(--secondary-color);
 }
-
 .nav-links-container.active{
     transform: translateX(0);
 }
+
+.close-menu-icon{
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 24pt;
+    color: var(--secondary-color);
+}
+.nav-links-container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+    padding: 20vh 2rem;
+}
+.nav-links-container ul li a, .menu-icons{
+    color: var(--secondary-color);
+    font-size: 16pt;
+}
+.nav-links-container ul li .btn{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+/* menu overlay */
+.menu-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999 !important;
+    display: none; /* Initially hidden */
+}
+.menu-overlay.active{
+    display: block; /* Show when active */
+}
+
 
 
 
