@@ -27,12 +27,12 @@ p, h3, h4, h5, h6, li, a, button{
     transition: ease-in-out 0.5s;
     color: var(--primary-color);
 }
-html{
-    overflow-x: hidden;
+html, body {
+  width: 100vw;
+  overflow-x: hidden;
+
 }
 body{
-    overflow-x: hidden;
-    width: 100vw;
     height: 100%;
     margin: 0;
 }
@@ -68,6 +68,7 @@ a{
 .nav{
     padding: 1.5rem 2rem;
     align-items:flex-end;
+    overflow-x: hidden;
 }
 .nav h1{
     font-size: 20pt;
@@ -83,17 +84,23 @@ a{
     flex-direction: column;
     gap: 2rem;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
-    width: 100vw;
-    height: 100vh;
+    width: min(100vw, 400px);
+    height: 100dvh;
+    z-index: 10000;
 
     transform: translateX(100%);
-    
+    transition: transform 0.3s ease;
+
     background-color: var(--primary-color);
+    color: block;
+}
+.nav-links-container ul li a{
     color: var(--secondary-color);
 }
+
 .nav-links-container.active{
     transform: translateX(0);
 }
@@ -102,19 +109,19 @@ a{
 
 /* =============== HOME =============== */
 .bg-image-computer{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-}
-.bg-image-mobile{
     display: none;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.bg-image-mobile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
     z-index: -1;
 }
