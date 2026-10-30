@@ -29,7 +29,7 @@ p, h3, h4, h5, h6, li, a, button{
 }
 html, body {
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 
 }
 body{
@@ -68,7 +68,6 @@ a{
 .nav{
     padding: 1.5rem 2rem;
     align-items:flex-end;
-    overflow-x: hidden;
 }
 .nav h1{
     font-size: 20pt;
